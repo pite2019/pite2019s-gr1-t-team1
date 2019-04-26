@@ -75,7 +75,10 @@ class LogWriter(object):
 	def get_second_word(text):
 		#9
 		# Return the second word of text
-		pass
+		try:
+			return text.split()[1]
+		except:
+			raise Exception('Unable to retrive the second word.')
 
 	def o_count_is_even(self):
 		#10
