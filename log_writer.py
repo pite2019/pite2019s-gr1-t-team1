@@ -7,7 +7,9 @@ class LogWriter(object):
 		#7
 		#save list_data and head_text as members of this object
 		# create member o_count with value None
-		pass
+		self.list_data = list_data
+		self.head_text = head_text
+		self.o_count = None
 
 	@staticmethod
 	def get_every_second_element(data):
@@ -79,7 +81,10 @@ class LogWriter(object):
 		#10
 		# return True if o_count is even
 		# return False is o_count is odd
-		pass
+		if o_count % 2 == 0:
+			return True
+		else
+			return False
 
 	def get_movie_reference(self):
 		#11
