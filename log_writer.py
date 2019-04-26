@@ -69,7 +69,10 @@ class LogWriter(object):
 		#8
 		# if the argument is not specified return "To seek the holy grail"
 		# in other case append the texts "To seek the " with argument and return
-		pass
+		if not isinstance(quest, str) or quest == None or quest == "holy grail":
+			return "To seek the holy grail"
+		else:
+			return "To seek the " + quest
 
 	@staticmethod
 	def get_second_word(text):
