@@ -97,6 +97,16 @@ class LogWriter(object):
 
 	def get_movie_reference(self):
 		#11
+		output = "" 
+		if o_count_is_even():
+			output = output + what_is_added_the_meaning_of_life(self.o_count)
+		else:
+			output = output + what_is_your_quest(get_second_word(self.head_text))
+		
+		if self.o_count > 7:
+			output = output + "\n" + what_is_your_quest()
+			
+		return output
 		#this is the tough one
 		#use o_count is even (use o_count_is_even())
 		#If o_count is even set output of this function
