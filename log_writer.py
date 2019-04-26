@@ -7,17 +7,14 @@ class LogWriter(object):
 		#7
 		#save list_data and head_text as members of this object
 		# create member o_count with value None
-		self.list_data = list_data
-		self.head_text = head_text
-		self.o_count = None
-		
+		pass
 
 	@staticmethod
 	def get_every_second_element(data):
 		#1
 		# return every second element (counting from index 1) from passed list 
 		# e.g. get_every_second_element([1,2,3,4]) == [2,4]
-		return data[1::2]
+		pass
 
 	@staticmethod
 	def avg_every_second_element(data):
@@ -72,10 +69,7 @@ class LogWriter(object):
 		#8
 		# if the argument is not specified return "To seek the holy grail"
 		# in other case append the texts "To seek the " with argument and return
-		if quest = "holy grail":
-			return "To seek the holy grail"
-		else:
-			return "To seek the " + quest
+		pass
 
 	@staticmethod
 	def get_second_word(text):
@@ -87,7 +81,10 @@ class LogWriter(object):
 		#10
 		# return True if o_count is even
 		# return False is o_count is odd
-		pass
+		if o_count % 2 == 0:
+			return True
+		else
+			return False
 
 	def get_movie_reference(self):
 		#11
