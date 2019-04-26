@@ -7,23 +7,23 @@ class LogWriter(object):
 		#7
 		#save list_data and head_text as members of this object
 		# create member o_count with value None
-		self.list_data = list_data
-		self.head_text = head_text
-		self.o_count = None
+		pass
 
 	@staticmethod
 	def get_every_second_element(data):
 		#1
-		# return every second element (counting from index 1) from passed list
+		# return every second element (counting from index 1) from passed list 
 		# e.g. get_every_second_element([1,2,3,4]) == [2,4]
-		return data[1::2]
+		pass
 
 	@staticmethod
 	def avg_every_second_element(data):
-		data_to_process = get_every_second_element(data)
-		s = sum(data_to_process)
-		l = len(data_to_process)
-		return s/l
+		#2
+		#return the average of every second element 
+		#(use function get_every_second_element )
+		#e.g:
+		# avg_every_second_element([1,2,3,4]) == 3.0
+		pass
 
 	@staticmethod
 	def insert_data_in_text(text, data):
@@ -39,22 +39,19 @@ class LogWriter(object):
 
 	@staticmethod
 	def count_o(text):
-		int i, count, length = len(text)
-
-		for(i=0:i<length;i++)
-			if(text[length]=='o' )
-			count++
-
-		return count
+		#4
+		#Count occurances of character 'o' in text
+		#e.g.:
+		# count_o("oOo0O00o") == 5
 		pass
 
 	def get_first_part(self):
 		#5
 		#append head_text (member of this object) with string
 		#"_________" followed by "\n After change: \n"
-		# append the output of insert_data_in_text applied
+		# append the output of insert_data_in_text applied 
 		#on head_text and list_data (members of this object).
-		#Set member o_count with number of o's in contained
+		#Set member o_count with number of o's in contained 
 		# in text you created above - use count_o.
 		# Return newly created text AND value of o_count
 		pass
@@ -63,7 +60,7 @@ class LogWriter(object):
 	def what_is_added_the_meaning_of_life(add):
 		#6
 		#return square root of 42 PLUS add
-		# if add is not given return 42
+		# if add is not given return 42 
 		#
 		pass
 
@@ -72,50 +69,45 @@ class LogWriter(object):
 		#8
 		# if the argument is not specified return "To seek the holy grail"
 		# in other case append the texts "To seek the " with argument and return
-		if not isinstance(quest, str) or quest == None or quest == "holy grail":
-			return "To seek the holy grail"
-		else:
-			return "To seek the " + quest
+		pass
 
 	@staticmethod
 	def get_second_word(text):
 		#9
 		# Return the second word of text
-		try:
-			return text.split()[1]
-		except:
-			raise Exception('Unable to retrive the second word.')
+		pass
 
 	def o_count_is_even(self):
 		#10
 		# return True if o_count is even
 		# return False is o_count is odd
-		if o_count % 2 == 0:
+		if self.o_count % 2 == 0:
 			return True
-		else
+		else:
 			return False
 
 	def get_movie_reference(self):
 		#11
-		output = "" 
-		if o_count_is_even():
-			output = output + what_is_added_the_meaning_of_life(self.o_count)
-		else:
-			output = output + what_is_your_quest(get_second_word(self.head_text))
-		
-		if self.o_count > 7:
-			output = output + "\n" + what_is_your_quest()
-			
-		return output
 		#this is the tough one
 		#use o_count is even (use o_count_is_even())
-		#If o_count is even set output of this function
+		#If o_count is even set output of this function 
 		#to value of what_is_added_the_meaning_of_life applied on o_count
 		#If o_count is odd setoutput to be the value of what_is_your_quest applied on
 		#the second word of head_text (member of this object).
 		#Lastly if o_count is higher than seven append empty line and
 		#empty call of what_is_your_quest to the output.
 		#Return the output
+		 str = ""
+		if o_count_is_even():
+			str += what_is_added_the_meaning_of_life(o_count)
+		else:
+			str += what_is_your_quest(self.head_text)
+
+		if o_count > 7:
+			str = "\n" + what_is_your_quest()
+		return str
+
+
 		pass
 
 	@staticmethod
@@ -130,10 +122,10 @@ class LogWriter(object):
 	def get_second_part(self, computation=None):
 		#13
 		# append the:
-		# - new line
-		# and
+		# - new line 
+		# and 
 		# - the value of function computation (in argument)
-		# applied on number 47
+		# applied on number 47 
 		# to the output of get_movie_reference
 		pass
 
@@ -164,10 +156,11 @@ if __name__=="__main__":
 
 Stil liist shilts list 1ist tilst iist l1ist? 'WHAT DID THE 0NE SNO0WMAN SAY TO THE OTHER SNOWMAN? 00O0O'
 _________
- After change:
+ After change: 
 
 Stil liist shilts list ([1, 2, 34, 4]) 1ist tilst iist l1ist? 'WHAT DID THE 0NE SNO0WMAN SAY TO THE OTHER SNOWMAN? 00O0O'
 0 O 0 O 0 O 0 O 0 O 0 O7.483314773547883
 To seek the holy grail
 22218.473985099097
 """
+
