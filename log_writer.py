@@ -39,10 +39,13 @@ class LogWriter(object):
 
 	@staticmethod
 	def count_o(text):
-		#4
-		#Count occurances of character 'o' in text
-		#e.g.:
-		# count_o("oOo0O00o") == 5
+		int i, count, length = len(text)
+
+		for(i=0:i<length;i++)
+			if(text[length]=='o' )
+			count++
+
+		return count
 		pass
 
 	def get_first_part(self):
